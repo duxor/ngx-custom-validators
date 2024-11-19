@@ -1,4 +1,4 @@
-import * as moment from 'moment';
+import moment from 'moment';
 import { UntypedFormControl } from '@angular/forms';
 import { minDate } from './validator';
 
