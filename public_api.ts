@@ -29,3 +29,4 @@ export { UrlValidator } from './src/app/url/directive';
 export { UUIDValidator } from './src/app/uuid/directive';
 
 export { CustomFormsModule } from './src/app/custom-forms.module';
+export { CustomValidators } from './src/app/custom-forms.module';
