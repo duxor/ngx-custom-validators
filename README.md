@@ -6,7 +6,7 @@ Directives for form validation (template or model driven).
 # Installation
 
 ```bash
-npm i ngx-custom-validators --save
+npm i @duxor/ngx-custom-validators --save
 ```
 
 # Validators
@@ -68,7 +68,7 @@ import `FormsModule` and `CustomFormsModule` in *app.module.ts*
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { CustomFormsModule } from 'ngx-custom-validators';
+import { CustomFormsModule } from '@duxor/ngx-custom-validators';
 
 import { AppComponent } from './app.component';
 
@@ -322,7 +322,7 @@ import `CustomValidators` in *app.component.ts*
 ```typescript
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { CustomValidators } from 'ngx-custom-validators';
+import { CustomValidators } from '@duxor/ngx-custom-validators';
 
 @Component({
     selector: 'app',
