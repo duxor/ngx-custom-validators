@@ -13,6 +13,14 @@ export function isDate(obj: any): boolean {
 
 export function parseDate(obj: any): string {
   try {
+    // Dayjs
+    if (obj.$d instanceof Date) {
+      const d = obj.$d as Date;
+      const month = +d.getMonth() + 1;
+      const day = +d.getDate();
+      return `${d.getFullYear()}-${formatDayOrMonth(month)}-${formatDayOrMonth(day)}`;
+    }
+
     // Moment.js
     if (obj._d instanceof Date) {
       const d = obj._d as Date;
