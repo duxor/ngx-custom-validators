@@ -10,8 +10,9 @@ const MIN_DATE_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[minDate][formControlName],[minDate][formControl],[minDate][ngModel]',
-  providers: [MIN_DATE_VALIDATOR]
+    selector: '[minDate][formControlName],[minDate][formControl],[minDate][ngModel]',
+    providers: [MIN_DATE_VALIDATOR],
+    standalone: false
 })
 export class MinDateValidator implements Validator, OnInit, OnChanges {
   @Input() minDate;

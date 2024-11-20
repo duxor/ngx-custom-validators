@@ -10,8 +10,9 @@ const URL_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[url][formControlName],[url][formControl],[url][ngModel]',
-  providers: [URL_VALIDATOR]
+    selector: '[url][formControlName],[url][formControl],[url][ngModel]',
+    providers: [URL_VALIDATOR],
+    standalone: false
 })
 export class UrlValidator implements Validator {
   validate(c: AbstractControl): {[key: string]: any} {

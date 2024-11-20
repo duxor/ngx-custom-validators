@@ -10,8 +10,9 @@ const MIN_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[min][formControlName],[min][formControl],[min][ngModel]',
-  providers: [MIN_VALIDATOR]
+    selector: '[min][formControlName],[min][formControl],[min][ngModel]',
+    providers: [MIN_VALIDATOR],
+    standalone: false
 })
 export class MinValidator implements Validator, OnInit, OnChanges {
   @Input() min: number;

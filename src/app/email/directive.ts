@@ -10,8 +10,9 @@ const EMAIL_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[ngvemail][formControlName],[ngvemail][formControl],[ngvemail][ngModel]',
-  providers: [EMAIL_VALIDATOR]
+    selector: '[ngvemail][formControlName],[ngvemail][formControl],[ngvemail][ngModel]',
+    providers: [EMAIL_VALIDATOR],
+    standalone: false
 })
 export class EmailValidator implements Validator {
   validate(c: AbstractControl): {[key: string]: any} {

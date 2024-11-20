@@ -10,8 +10,9 @@ const CREDIT_CARD_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[creditCard][formControlName],[creditCard][formControl],[creditCard][ngModel]',
-  providers: [CREDIT_CARD_VALIDATOR]
+    selector: '[creditCard][formControlName],[creditCard][formControl],[creditCard][ngModel]',
+    providers: [CREDIT_CARD_VALIDATOR],
+    standalone: false
 })
 export class CreditCardValidator implements Validator {
   validate(c: AbstractControl): {[key: string]: any} {

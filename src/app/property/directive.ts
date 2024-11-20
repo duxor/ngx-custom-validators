@@ -10,8 +10,9 @@ const PROPERTY_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[property][formControlName],[property][formControl],[property][ngModel]',
-  providers: [PROPERTY_VALIDATOR]
+    selector: '[property][formControlName],[property][formControl],[property][ngModel]',
+    providers: [PROPERTY_VALIDATOR],
+    standalone: false
 })
 export class PropertyValidator implements Validator, OnInit, OnChanges {
   @Input() property: string;

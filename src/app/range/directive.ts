@@ -10,8 +10,9 @@ const RANGE_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[range][formControlName],[range][formControl],[range][ngModel]',
-  providers: [RANGE_VALIDATOR]
+    selector: '[range][formControlName],[range][formControl],[range][ngModel]',
+    providers: [RANGE_VALIDATOR],
+    standalone: false
 })
 export class RangeValidator implements Validator, OnInit, OnChanges {
   @Input() range: [number];

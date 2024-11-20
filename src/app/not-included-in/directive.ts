@@ -10,8 +10,9 @@ const NOT_INCLUDED_IN_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[notIncludedIn][formControlName],[notIncludedIn][formControl],[notIncludedIn][ngModel]',
-  providers: [NOT_INCLUDED_IN_VALIDATOR]
+    selector: '[notIncludedIn][formControlName],[notIncludedIn][formControl],[notIncludedIn][ngModel]',
+    providers: [NOT_INCLUDED_IN_VALIDATOR],
+    standalone: false
 })
 export class NotIncludedInValidator implements Validator, OnInit, OnChanges {
   @Input() notIncludedIn: Array<any>;

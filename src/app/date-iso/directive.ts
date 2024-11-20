@@ -10,8 +10,9 @@ const DATE_ISO_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[dateISO][formControlName],[dateISO][formControl],[dateISO][ngModel]',
-  providers: [DATE_ISO_VALIDATOR]
+    selector: '[dateISO][formControlName],[dateISO][formControl],[dateISO][ngModel]',
+    providers: [DATE_ISO_VALIDATOR],
+    standalone: false
 })
 export class DateISOValidator implements Validator {
   validate(c: AbstractControl): {[key: string]: any} {

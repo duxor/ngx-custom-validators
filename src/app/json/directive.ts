@@ -10,8 +10,9 @@ const JSON_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[json][formControlName],[json][formControl],[json][ngModel]',
-  providers: [JSON_VALIDATOR]
+    selector: '[json][formControlName],[json][formControl],[json][ngModel]',
+    providers: [JSON_VALIDATOR],
+    standalone: false
 })
 export class JSONValidator implements Validator {
   validate(c: AbstractControl): {[key: string]: any} {

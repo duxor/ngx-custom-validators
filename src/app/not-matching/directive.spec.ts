@@ -9,7 +9,8 @@ import { createComponent } from '../../dev/test';
 @Component({
     template: `
         <input #field type='text' [(ngModel)]='value' [notMatching]='pattern' #fieldModel='ngModel'/>
-    `
+    `,
+    standalone: false
 })
 class NotMatchingValidatorAppComponent {
     public value: string;

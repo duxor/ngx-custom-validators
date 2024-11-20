@@ -10,8 +10,9 @@ const NOT_EQUAL_TO_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[notEqualTo][formControlName],[notEqualTo][formControl],[notEqualTo][ngModel]',
-  providers: [NOT_EQUAL_TO_VALIDATOR]
+    selector: '[notEqualTo][formControlName],[notEqualTo][formControl],[notEqualTo][ngModel]',
+    providers: [NOT_EQUAL_TO_VALIDATOR],
+    standalone: false
 })
 export class NotEqualToValidator implements Validator, OnInit {
   @Input() notEqualTo: UntypedFormControl;

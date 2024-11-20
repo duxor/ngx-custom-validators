@@ -10,8 +10,9 @@ const LESS_THAN_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[lt][formControlName],[lt][formControl],[lt][ngModel]',
-  providers: [LESS_THAN_VALIDATOR]
+    selector: '[lt][formControlName],[lt][formControl],[lt][ngModel]',
+    providers: [LESS_THAN_VALIDATOR],
+    standalone: false
 })
 export class LessThanValidator implements Validator, OnInit, OnChanges {
   @Input() lt: number;

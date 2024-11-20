@@ -10,8 +10,9 @@ const EQUAL_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[equal][formControlName],[equal][formControl],[equal][ngModel]',
-  providers: [EQUAL_VALIDATOR]
+    selector: '[equal][formControlName],[equal][formControl],[equal][ngModel]',
+    providers: [EQUAL_VALIDATOR],
+    standalone: false
 })
 export class EqualValidator implements Validator, OnInit, OnChanges {
   @Input() equal: any;

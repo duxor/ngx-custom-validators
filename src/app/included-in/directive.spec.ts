@@ -9,7 +9,8 @@ import { createComponent } from '../../dev/test';
 @Component({
     template: `
         <input #field type='text' [(ngModel)]='value' [includedIn]='inArray' #fieldModel='ngModel'/>
-    `
+    `,
+    standalone: false
 })
 class IncludedInValidatorAppComponent {
     public value: string;

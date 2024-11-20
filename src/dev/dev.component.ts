@@ -3,9 +3,10 @@ import { Validators, UntypedFormControl, UntypedFormGroup } from '@angular/forms
 import { CustomValidators } from '../app/custom-forms.module';
 
 @Component({
-  selector: 'app-dev',
-  templateUrl: 'dev.component.html',
-  styleUrls: ['dev.component.scss']
+    selector: 'app-dev',
+    templateUrl: 'dev.component.html',
+    styleUrls: ['dev.component.scss'],
+    standalone: false
 })
 export class DevComponent implements OnInit {
   public form: UntypedFormGroup;

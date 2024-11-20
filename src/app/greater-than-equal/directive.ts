@@ -10,8 +10,9 @@ const GREATER_THAN_EQUAL_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[gte][formControlName],[gte][formControl],[gte][ngModel]',
-  providers: [GREATER_THAN_EQUAL_VALIDATOR]
+    selector: '[gte][formControlName],[gte][formControl],[gte][ngModel]',
+    providers: [GREATER_THAN_EQUAL_VALIDATOR],
+    standalone: false
 })
 export class GreaterThanEqualValidator implements Validator, OnInit, OnChanges {
   @Input() gte: number;

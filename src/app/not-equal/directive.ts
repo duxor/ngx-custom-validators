@@ -10,8 +10,9 @@ const NOT_EQUAL_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[notEqual][formControlName],[notEqual][formControl],[notEqual][ngModel]',
-  providers: [NOT_EQUAL_VALIDATOR]
+    selector: '[notEqual][formControlName],[notEqual][formControl],[notEqual][ngModel]',
+    providers: [NOT_EQUAL_VALIDATOR],
+    standalone: false
 })
 export class NotEqualValidator implements Validator, OnInit, OnChanges {
   @Input() notEqual: any;

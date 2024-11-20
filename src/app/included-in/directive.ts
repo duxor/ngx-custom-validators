@@ -10,8 +10,9 @@ const INCLUDED_IN_VALIDATOR: any = {
 };
 
 @Directive({
-  selector: '[includedIn][formControlName],[includedIn][formControl],[includedIn][ngModel]',
-  providers: [INCLUDED_IN_VALIDATOR]
+    selector: '[includedIn][formControlName],[includedIn][formControl],[includedIn][ngModel]',
+    providers: [INCLUDED_IN_VALIDATOR],
+    standalone: false
 })
 export class IncludedInValidator implements Validator, OnInit, OnChanges {
   @Input() includedIn: Array<any>;
